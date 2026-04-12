@@ -1,0 +1,81 @@
+.title {
+  display: block;
+  position: relative;
+  line-height: 1;
+
+  &.title--h1 {
+    font-size: 94px;
+    @media (max-width: 767px) {
+      font-size: 37px;
+    }
+  }
+
+  &.title--h2 {
+    font-size: 68px;
+    @media (max-width: 767px) {
+      font-size: 26px;
+    }
+  }
+
+  &.title--h3 {
+    font-size: 66px;
+    @media (max-width: 767px) {
+      font-size: 26px;
+    }
+  }
+
+  &.title--h4 {
+    font-size: 66px;
+    @media (max-width: 767px) {
+      font-size: 26px;
+    }
+  }
+
+  &.title--h5 {
+    font-size: 43px;
+    @media (max-width: 767px) {
+      font-size: 18px;
+    }
+  }
+
+  &.title--h6 {
+    font-size: 41px;
+    line-height: 1.2;
+    @media (max-width: 767px) {
+      font-size: 18px;
+    }
+  }
+
+  &.white {
+    color: var(--white);
+  }
+
+  &.color {
+    z-index: 0;
+    &:before {
+      content: '';
+      position: absolute;
+      left: -30px;
+      top: -14px;
+      right: -30px;
+      bottom: -7px;
+      z-index: -1;
+      background: var(--color);
+      transform: skewX(-40deg);
+      @media (max-width: 767px) {
+        left: -10px;
+        top: -10px;
+        right: -10px;
+        bottom: -6px;
+        transform: skewX(-30deg);
+      }
+    }
+  }
+}
+
+.text {
+  font-size: 36px;
+  @media (max-width: 767px) {
+    font-size: 16px;
+  }
+}

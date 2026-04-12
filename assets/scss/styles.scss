@@ -7,9 +7,19 @@
   --grey: #ced0cd;
   --grey-light: #dbdddd;
   --grey-text: #8b8d8d;
+  --header-bg: #636b70;
   --color: #00d4cb;
   --invalid: #e30808;
+
+  --transition: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@import 'reset';
 @import 'fonts';
+@import 'reset';
+@import 'header';
+@import 'section';
+@import 'typography';
+@import 'section__hero';
+@import 'section__about';
+@import 'section__register';
+@import 'popup';

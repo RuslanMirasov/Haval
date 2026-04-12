@@ -1,0 +1,21 @@
+.section {
+  display: block;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 1390px;
+  padding: 0px 20px;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}

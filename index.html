@@ -4,26 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="theme-color" content="#00D4CB" />
+    <meta name="theme-color" content="#636b70" />
     <meta name="description" content="Haval" />
     <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico" />
     <link rel="stylesheet" href="./assets/css/styles.min.css" />
     <title>Haval</title>
   </head>
   <body class="body">
+    <!--HEADER-->
     <header class="header">
       <a href="./" class="logo">
         <img src="./assets/img/logo.svg" alt="" />
       </a>
     </header>
+
     <main class="main">
       <!--HERO-->
       <section class="section section--hero">
         <img src="./assets/img/hero.webp" alt="" class="hero-image" />
         <div class="container">
-          <h1 class="title">
-            <span class="title--h1">ВЫХОДНЫЕ <br />С HAVAL</span>
-            <span class="title--h2">в Краснодаре</span>
+          <h1>
+            <span class="title title--h1">ВЫХОДНЫЕ <br />С HAVAL</span>
+            <span class="title title--h2">в Краснодаре</span>
           </h1>
 
           <p class="text">
@@ -39,7 +41,7 @@
           <p class="text">Будем рады провести этот день вместе с&nbsp;вами!</p>
 
           <div class="hero-date">
-            <h2 class="title title--h2">25 апреля / 12:30</h2>
+            <h2 class="title title--h2 color">25 апреля / 12:30</h2>
             <button class="button button--grey">
               <img src="./assets/img/pin.svg" alt="" class="pin" />
               <span>Северский Рыбхоз</span>
@@ -53,7 +55,7 @@
         <img src="./assets/img/car.webp" alt="" class="about-image car" />
         <img src="./assets/img/foto.webp" alt="" class="about-image foto" />
         <div class="container">
-          <h2 class="title title--h3">Программа<br />мероприятия</h2>
+          <h2 class="title title--h3" data-popup-open="registration-success">Программа<br />мероприятия</h2>
 
           <ul class="program">
             <li>
@@ -101,20 +103,21 @@
         <!--REGISTRATION SUCCESS POPUP-->
         <div class="popup-content" id="registration-success">
           <button class="popup-close" data-popup-close></button>
-          <h2 class="title title--h2">
+          <h2 class="title title--h6">
             Спасибо<br />
-            за регистрацию на мероприятие <br />
-            <span class="with-bg">«ВЫХОДНЫЕ С HAVAL»</span>
+            за регистрацию на&nbsp;мероприятие <br />
           </h2>
-          <p>
+
+          <b class="title title--h5 color">«ВЫХОДНЫЕ С HAVAL»</b>
+          <p class="text">
             Ваша заявка принята.<br />
             После подтверждения вашего участия, <br />мы пригласим вас в telegram-канал <br />для гостей мероприятия.
           </p>
-          <p class="signatur">Ваш HAVAL</p>
+          <b class="title title--h5 white">Ваш HAVAL</b>
         </div>
 
         <!--HELP POPUP-->
-        <div class="popup-content" id="registration-success">
+        <div class="popup-content" id="help">
           <button class="popup-close" data-popup-close></button>
           <img src="./assets/img/help.webp" alt="" class="help-image" />
         </div>
