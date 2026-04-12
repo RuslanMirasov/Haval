@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="#00D4CB" />
+    <meta name="description" content="Haval" />
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico" />
+    <link rel="stylesheet" href="./assets/css/styles.min.css" />
+    <title>Haval</title>
+  </head>
+  <body class="body">
+    <header class="header">
+      <a href="./" class="logo">
+        <img src="./assets/img/logo.svg" alt="" />
+      </a>
+    </header>
+    <main class="main">
+      <!--HERO-->
+      <section class="section section--hero">
+        <img src="./assets/img/hero.webp" alt="" class="hero-image" />
+        <div class="container">
+          <h1 class="title">
+            <span class="title--h1">ВЫХОДНЫЕ <br />С HAVAL</span>
+            <span class="title--h2">в Краснодаре</span>
+          </h1>
+
+          <p class="text">
+            Есть моменты, которые хочется разделить с&nbsp;близкими —&nbsp; на природе, в&nbsp;хорошей компании и&nbsp;в&nbsp;атмосфере настоящего
+            семейного праздника.
+          </p>
+
+          <p class="text">
+            Мы рады пригласить вас провести выходные с&nbsp;HAVAL — день, наполненный общением, улыбками и&nbsp;яркими впечатлениями. Вас ждут катания
+            на&nbsp;квадроциклах, рыбалка, развлечения для детей, подарки и&nbsp;праздничное барбекю для&nbsp;всей семьи.
+          </p>
+
+          <p class="text">Будем рады провести этот день вместе с&nbsp;вами!</p>
+
+          <div class="hero-date">
+            <h2 class="title title--h2">25 апреля / 12:30</h2>
+            <button class="button button--grey">
+              <img src="./assets/img/pin.svg" alt="" class="pin" />
+              <span>Северский Рыбхоз</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!--ABOUT-->
+      <section class="section section--about">
+        <img src="./assets/img/car.webp" alt="" class="about-image car" />
+        <img src="./assets/img/foto.webp" alt="" class="about-image foto" />
+        <div class="container">
+          <h2 class="title title--h3">Программа<br />мероприятия</h2>
+
+          <ul class="program">
+            <li>
+              <span>12:30-13:30</span>
+              <span>Регистрация<br />Welcome coffee<br />Флешмоб</span>
+            </li>
+            <li>
+              <span>13:30-17:30</span>
+              <span>Активности</span>
+            </li>
+            <li>
+              <span>17:30 - 19:00</span>
+              <span>Барбекю</span>
+            </li>
+            <li>
+              <span>19:00-19:30</span>
+              <span>&nbsp;<br />Окончание<br />мероприятия</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!--REGISTRATION-->
+      <section class="section section--registration">
+        <div class="container">
+          <h2 class="title title--h3">Регистрация</h2>
+          <p class="subtitle">
+            Пожалуйста, корректно заполните все пункты анкеты. На стойке ресепшен в&nbsp;день мероприятия необходимо будет подтвердить свои данные.
+          </p>
+
+          <form action="#" class="form">
+            <fieldset class="fieldset">1</fieldset>
+            <fieldset class="fieldset">2</fieldset>
+            <fieldset class="fieldset full">3</fieldset>
+
+            <button type="submit" class="button"><span>Отправить</span></button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!--POPUPS-->
+    <div class="backdrop" data-backdrop>
+      <div class="popup" data-popup>
+        <!--REGISTRATION SUCCESS POPUP-->
+        <div class="popup-content" id="registration-success">
+          <button class="popup-close" data-popup-close></button>
+          <h2 class="title title--h2">
+            Спасибо<br />
+            за регистрацию на мероприятие <br />
+            <span class="with-bg">«ВЫХОДНЫЕ С HAVAL»</span>
+          </h2>
+          <p>
+            Ваша заявка принята.<br />
+            После подтверждения вашего участия, <br />мы пригласим вас в telegram-канал <br />для гостей мероприятия.
+          </p>
+          <p class="signatur">Ваш HAVAL</p>
+        </div>
+
+        <!--HELP POPUP-->
+        <div class="popup-content" id="registration-success">
+          <button class="popup-close" data-popup-close></button>
+          <img src="./assets/img/help.webp" alt="" class="help-image" />
+        </div>
+      </div>
+    </div>
+
+    <script src="./assets/js/scripts.js" type="module" defer></script>
+  </body>
+</html>

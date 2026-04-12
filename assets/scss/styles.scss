@@ -1,0 +1,15 @@
+:root {
+  --haval: 'haval', sans-serif;
+  --tt: 'tt-wellingtons', sans-serif;
+
+  --white: #ffffff;
+  --black: #000000;
+  --grey: #ced0cd;
+  --grey-light: #dbdddd;
+  --grey-text: #8b8d8d;
+  --color: #00d4cb;
+  --invalid: #e30808;
+}
+
+@import 'reset';
+@import 'fonts';
