@@ -336,14 +336,14 @@ fieldset {
 }
 
 .section--hero {
-  padding: 60px 0px 140px 0px;
+  padding: 60px 0px clamp(40px, 9.7222vw, 140px) 0px;
 }
 .section--hero .container {
   gap: clamp(40px, 6.9444vw, 100px);
 }
 @media (max-width: 767px) {
   .section--hero {
-    padding: 40px 0px 60px 0px;
+    padding: 40px 0px clamp(40px, 9.7222vw, 140px) 0px;
   }
 }
 
@@ -415,13 +415,255 @@ fieldset {
 }
 
 .section--about {
-  padding: 50px 0px;
+  padding-top: clamp(80px, 16.6667vw, 240px);
+  padding-bottom: clamp(60px, 6.9444vw, 100px);
   background: var(--white);
+  z-index: 2;
+}
+.section--about:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -1px;
+  -webkit-transform: translate(-50%, 0%);
+      -ms-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  width: 100%;
+  min-width: clamp(680px, 134.0278vw, 1930px);
+  height: clamp(200px, 38.6806vw, 557px);
+  background: url("../img/wave-about.svg") no-repeat center top/cover;
+}
+@media (max-width: 499px) {
+  .section--about:before {
+    -webkit-transform: translate(-60%, 0%);
+        -ms-transform: translate(-60%, 0%);
+            transform: translate(-60%, 0%);
+  }
+}
+
+.program {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: clamp(20px, 4.1667vw, 60px);
+  max-width: 1020px;
+  margin-top: clamp(30px, 4.8611vw, 70px);
+}
+.program:before {
+  content: "";
+  position: absolute;
+  left: calc(50% - 1px);
+  width: 2px;
+  height: calc(100% - clamp(20px, 12.5vw, 180px));
+  background: var(--black);
+}
+.program li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: clamp(48px, 10.9722vw, 158px);
+}
+.program li:before {
+  content: "";
+  position: absolute;
+  width: clamp(16px, 3.6111vw, 52px);
+  height: clamp(16px, 3.6111vw, 52px);
+  background: #eff3f2;
+  border-radius: 52px;
+  border: clamp(4px, 0.8333vw, 12px) solid var(--black);
+}
+.program li span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: clamp(140px, 29.8611vw, 430px);
+  min-height: clamp(50px, 12.3611vw, 178px);
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: left;
+  font-family: var(--haval);
+  font-size: clamp(12px, 2.5694vw, 37px);
+  line-height: 1.6;
+}
+.program li span:first-child {
+  text-align: right;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.about-image {
+  position: absolute;
+  bottom: 0px;
+  pointer-events: none;
+}
+.about-image.foto {
+  width: clamp(95px, 25.8333vw, 372px);
+  height: clamp(100px, 27.0833vw, 390px);
+  right: 50%;
+  -webkit-transform: translate(-100%, -11%) rotate(-21.35deg);
+      -ms-transform: translate(-100%, -11%) rotate(-21.35deg);
+          transform: translate(-100%, -11%) rotate(-21.35deg);
+}
+.about-image.car {
+  width: clamp(120px, 38.5417vw, 555px);
+  height: clamp(153px, 49.0972vw, 707px);
+  left: 50%;
+  -webkit-transform: translate(95%, -10%) rotate(-50.79deg);
+      -ms-transform: translate(95%, -10%) rotate(-50.79deg);
+          transform: translate(95%, -10%) rotate(-50.79deg);
+}
+@media (max-width: 1279px) {
+  .about-image.car {
+    -webkit-transform: translate(80%, -10%) rotate(-50.79deg);
+        -ms-transform: translate(80%, -10%) rotate(-50.79deg);
+            transform: translate(80%, -10%) rotate(-50.79deg);
+  }
+}
+@media (max-width: 767px) {
+  .about-image.car {
+    -webkit-transform: translate(80%, -40%) rotate(-35.79deg);
+        -ms-transform: translate(80%, -40%) rotate(-35.79deg);
+            transform: translate(80%, -40%) rotate(-35.79deg);
+  }
+}
+
+.foto-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  pointer-events: none;
+  height: clamp(100px, 33.3333vw, 480px);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: calc(clamp(100px, 33.3333vw, 480px) / 2 * -1) 0px;
 }
 
 .section--registration {
   padding-top: clamp(60px, 8.3333vw, 120px);
   padding-bottom: clamp(60px, 11.8056vw, 170px);
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 24px;
+  margin-top: clamp(20px, 4.1667vw, 60px);
+}
+@media (max-width: 1023px) {
+  .form {
+    gap: 18px;
+  }
+}
+.form .fieldset {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 16px;
+  -webkit-box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.25);
+  background: var(--grey-light);
+  border-radius: 22px;
+  padding: 24px 30px;
+}
+@media (max-width: 1023px) {
+  .form .fieldset {
+    padding: 20px 20px;
+    border-radius: 10px;
+  }
+}
+.form .fieldset.full {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 100%;
+  padding: 0;
+  background: none;
+  border-radius: 0px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+@media (max-width: 1023px) {
+  .form .fieldset {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    width: 100%;
+  }
+}
+.form .button {
+  min-width: clamp(250px, 34.1667vw, 492px);
+}
+@media (max-width: 767px) {
+  .form .button {
+    min-width: 1px;
+    max-width: 375px;
+    width: 100%;
+  }
 }
 
 .body.locked {

@@ -1,10 +1,10 @@
 .section--hero {
-  padding: 60px 0px 140px 0px;
+  padding: 60px 0px myclamp(40px, 140px, 1440px, 1440px) 0px;
   .container {
     gap: myclamp(40px, 100px, 1440px, 1440px);
   }
   @media (max-width: 767px) {
-    padding: 40px 0px 60px 0px;
+    padding: 40px 0px myclamp(40px, 140px, 1440px, 1440px) 0px;
   }
 }
 

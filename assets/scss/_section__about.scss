@@ -1,4 +1,119 @@
 .section--about {
-  padding: 50px 0px;
+  padding-top: myclamp(80px, 240px, 1440px, 1440px);
+  padding-bottom: myclamp(60px, 100px, 1440px, 1440px);
   background: var(--white);
+  z-index: 2;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -1px;
+    transform: translate(-50%, 0%);
+    width: 100%;
+    min-width: myclamp(680px, 1930px, 1440px, 1440px);
+    height: myclamp(200px, 557px, 1440px, 1440px);
+    background: url('../img/wave-about.svg') no-repeat center top/cover;
+    @media (max-width: 499px) {
+      transform: translate(-60%, 0%);
+    }
+  }
+}
+
+.program {
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: myclamp(20px, 60px, 1440px, 1440px);
+  max-width: 1020px;
+  margin-top: myclamp(30px, 70px, 1440px, 1440px);
+  &:before {
+    content: '';
+    position: absolute;
+    left: calc(50% - 1px);
+    width: 2px;
+    height: calc(100% - myclamp(20px, 180px, 1440px, 1440px));
+    background: var(--black);
+  }
+
+  li {
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: myclamp(48px, 158px, 1440px, 1440px);
+    &:before {
+      content: '';
+      position: absolute;
+      width: myclamp(16px, 52px, 1440px, 1440px);
+      height: myclamp(16px, 52px, 1440px, 1440px);
+      background: #eff3f2;
+      border-radius: 52px;
+      border: myclamp(4px, 12px, 1440px, 1440px) solid var(--black);
+    }
+
+    span {
+      display: flex;
+      position: relative;
+      width: myclamp(140px, 430px, 1440px, 1440px);
+      min-height: myclamp(50px, 178px, 1440px, 1440px);
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+      align-content: center;
+      text-align: left;
+      font-family: var(--haval);
+      font-size: myclamp(12px, 37px, 1440px, 1440px);
+      line-height: 1.6;
+      &:first-child {
+        text-align: right;
+        justify-content: flex-end;
+      }
+    }
+  }
+}
+
+.about-image {
+  position: absolute;
+  bottom: 0px;
+  pointer-events: none;
+
+  &.foto {
+    width: myclamp(95px, 372px, 1440px, 1440px);
+    height: myclamp(100px, 390px, 1440px, 1440px);
+    right: 50%;
+    transform: translate(-100%, -11%) rotate(-21.35deg);
+  }
+
+  &.car {
+    width: myclamp(120px, 555px, 1440px, 1440px);
+    height: myclamp(153px, 707px, 1440px, 1440px);
+    left: 50%;
+    transform: translate(95%, -10%) rotate(-50.79deg);
+    @media (max-width: 1279px) {
+      transform: translate(80%, -10%) rotate(-50.79deg);
+    }
+    @media (max-width: 767px) {
+      transform: translate(80%, -40%) rotate(-35.79deg);
+    }
+  }
+}
+
+.foto-wrapper {
+  display: flex;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  pointer-events: none;
+  height: myclamp(100px, 480px, 1440px, 1440px);
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: calc((myclamp(100px, 480px, 1440px, 1440px) / 2) * -1) 0px;
 }
