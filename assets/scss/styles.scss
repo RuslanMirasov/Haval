@@ -9,16 +9,19 @@
   --grey-text: #8b8d8d;
   --header-bg: #636b70;
   --color: #00d4cb;
+  --hover: #08e6da;
   --invalid: #e30808;
 
   --transition: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@import 'mixins';
 @import 'fonts';
 @import 'reset';
 @import 'header';
 @import 'section';
 @import 'typography';
+@import 'buttons';
 @import 'section__hero';
 @import 'section__about';
 @import 'section__register';

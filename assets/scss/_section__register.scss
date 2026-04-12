@@ -1,3 +1,4 @@
 .section--registration {
-  padding: 50px 0px;
+  padding-top: myclamp(60px, 120px, 1440px, 1440px);
+  padding-bottom: myclamp(60px, 170px, 1440px, 1440px);
 }

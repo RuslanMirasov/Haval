@@ -1,6 +1,50 @@
 .section--hero {
   padding: 60px 0px 140px 0px;
+  .container {
+    gap: myclamp(40px, 100px, 1440px, 1440px);
+  }
   @media (max-width: 767px) {
     padding: 40px 0px 60px 0px;
   }
+}
+
+.hero-image {
+  position: relative;
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  margin-bottom: -14.5vw;
+
+  @media (max-width: 640px) {
+    min-width: 640px;
+    margin-bottom: -95px;
+  }
+
+  @media (max-width: 500px) {
+    left: 100%;
+    transform: translate(-95%, 0%);
+  }
+}
+
+.hero-texts {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: myclamp(20px, 60px, 1440px, 1440px);
+  margin-bottom: myclamp(10px, 30px, 1440px, 1440px);
+}
+
+.hero-date {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: myclamp(20px, 30px, 1440px, 1440px);
 }

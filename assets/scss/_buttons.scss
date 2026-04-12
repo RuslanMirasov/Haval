@@ -1,0 +1,53 @@
+.button {
+  display: inline-flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 20px;
+  padding: 10px 30px;
+  background-color: var(--color);
+  transition: background-color 0.3s var(--transition) 0s;
+  height: myclamp(46px, 74px, 1440px, 1440px);
+  border-radius: myclamp(5px, 22px, 1440px, 1440px);
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.25);
+  @media (max-width: 767px) {
+    padding: 10px 14px;
+    gap: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  span {
+    font-family: var(--tt);
+    font-weight: 500;
+    font-size: myclamp(24px, 36px, 1440px, 1440px);
+    line-height: 1;
+    color: var(--black);
+    transition: color 0.3s var(--transition) 0s;
+  }
+
+  img {
+    max-height: myclamp(18px, 54px, 1440px, 1440px);
+  }
+
+  &.button--grey {
+    height: myclamp(30px, 100px, 1440px, 1440px);
+    background-color: var(--grey-light);
+    span {
+      font-size: myclamp(12px, 45px, 1440px, 1440px);
+      font-family: var(--haval);
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--hover);
+    }
+
+    &.button--grey {
+      &:hover {
+        background-color: var(--white);
+      }
+    }
+  }
+}
