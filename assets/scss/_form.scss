@@ -1,0 +1,261 @@
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.text-danger {
+  display: block;
+  text-align: left;
+  font-size: 12px;
+  line-height: 1;
+  color: var(--invalid);
+}
+
+label .text-danger {
+  display: inline;
+  font-size: inherit;
+}
+
+.form-text {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  gap: myclamp(4px, 6px, 1440px, 1440px);
+  font-size: myclamp(8px, 12px, 1440px, 1440px);
+  line-height: 1;
+  color: #9a9e9e;
+
+  &.help {
+    cursor: pointer;
+    img {
+      position: relative;
+      top: -1px;
+    }
+  }
+}
+
+.form-label {
+  display: block;
+  width: 100%;
+  font-size: myclamp(11px, 23px, 1440px, 1440px);
+  line-height: 1;
+  text-align: left;
+  margin-bottom: myclamp(0px, 4px, 1440px, 1440px);
+}
+
+.fieldset:first-child {
+  font-family: var(--tt);
+  font-weight: 500;
+
+  .form-label {
+    font-size: myclamp(13px, 20px, 1440px, 1440px);
+    margin-bottom: 0px;
+    color: #9a9e9e;
+  }
+
+  .form-control {
+    width: 100%;
+    height: myclamp(20px, 38px, 1440px, 1440px);
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--black);
+    color: var(--black);
+    font-family: var(--tt);
+    font-weight: 500;
+    outline: none;
+    font-size: myclamp(12px, 23px, 1440px, 1440px);
+    padding: 0;
+
+    &:-webkit-autofill {
+      box-shadow: 0 0 0px 1000px var(--grey-light) inset !important;
+      -webkit-text-fill-color: var(--black) !important;
+      font-size: myclamp(12px, 23px, 1440px, 1440px) !important;
+      font-family: var(--tt) !important;
+      transition: background-color 9999s ease-in-out 0s;
+    }
+  }
+}
+
+.btn-check {
+  display: none;
+  + .checkbox-label-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: myclamp(18px, 49px, 1440px, 1440px);
+    height: myclamp(18px, 45px, 1440px, 1440px);
+    border: 1px solid var(--black);
+    cursor: pointer;
+    user-select: none;
+    margin: 4px 0px;
+    &:before {
+      content: '';
+      position: absolute;
+      width: myclamp(10px, 31px, 1440px, 1440px);
+      height: myclamp(10px, 29px, 1440px, 1440px);
+      background: var(--color);
+      transform: scale(0);
+      transition: transform 0.3s var(--transition) 0s;
+    }
+  }
+
+  &:checked {
+    + .checkbox-label-text {
+      &:before {
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+.form-check {
+  text-align: left;
+  padding-left: myclamp(28px, 34px, 1440px, 1440px);
+  > .text-danger {
+    padding-top: 4px;
+  }
+}
+
+.form-check-input {
+  display: none;
+
+  + .form-check-label {
+    position: relative;
+    font-size: myclamp(14px, 22px, 1440px, 1440px);
+    line-height: 1.2;
+    color: #8b8d8d;
+    @media (max-width: 767px) {
+      font-size: 11px;
+      display: block;
+      line-height: 1.2;
+    }
+
+    cursor: pointer;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      left: -26px;
+      top: 9px;
+      border: 1px solid #8b8d8d;
+      background: #dbdddd;
+
+      @media (max-width: 767px) {
+        top: 0px;
+      }
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      left: -24px;
+      top: 11px;
+      background: var(--color);
+      transform: scale(0);
+      transition: transform 0.3s var(--transition) 0s;
+      @media (max-width: 767px) {
+        top: 2px;
+      }
+    }
+  }
+
+  &:checked {
+    + .form-check-label {
+      &:after {
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+.form-control {
+  border: 1px solid var(--black);
+  width: 100%;
+  height: myclamp(30px, 45px, 1440px, 1440px);
+  margin: myclamp(2px, 4px, 1440px, 1440px) 0px;
+  background: rgba(0, 0, 0, 0);
+  padding: 0px myclamp(8px, 13px, 1440px, 1440px);
+  font-family: var(--tt);
+  font-weight: 500;
+  font-size: myclamp(18px, 35px, 1440px, 1440px);
+  outline: none;
+  color: var(--black);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  &:-webkit-autofill {
+    box-shadow: 0 0 0px 1000px var(--grey-light) inset !important;
+    -webkit-text-fill-color: var(--black) !important;
+    font-size: myclamp(18px, 35px, 1440px, 1440px) !important;
+    font-family: var(--tt) !important;
+    transition: background-color 9999s ease-in-out 0s;
+  }
+}
+
+.form-select.open + .input-icon {
+  transform: rotate(180deg);
+}
+
+.input-select-wrapper {
+  display: block;
+  width: 100%;
+  position: relative;
+  margin: myclamp(2px, 4px, 1440px, 1440px) 0px;
+  &.auto {
+    width: auto;
+  }
+  .form-select {
+    margin: 0;
+  }
+}
+
+.form-select {
+  border: 1px solid var(--black);
+  width: 100%;
+  height: myclamp(30px, 45px, 1440px, 1440px);
+  margin: myclamp(2px, 4px, 1440px, 1440px) 0px;
+  background: var(--grey-light);
+  padding: 0px myclamp(8px, 13px, 1440px, 1440px);
+  font-family: var(--tt);
+  font-weight: 500;
+  font-size: myclamp(18px, 35px, 1440px, 1440px);
+  outline: none;
+  color: var(--black);
+  padding-right: 45px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.input-icon {
+  display: flex;
+  position: absolute;
+  width: myclamp(30px, 45px, 1440px, 1440px);
+  height: myclamp(30px, 45px, 1440px, 1440px);
+  right: 0px;
+  top: 0px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-shrink: 0;
+  transition: 0.3s;
+  transform: rotate(0deg);
+  pointer-events: none;
+
+  img {
+    width: 40%;
+    height: auto;
+    pointer-events: none;
+  }
+}

@@ -90,17 +90,300 @@
         <div class="container">
           <h2 class="title title--h3">Регистрация</h2>
           <p class="subtitle">
-            Пожалуйста, корректно заполните все пункты анкеты. На стойке ресепшен в&nbsp;день <br />мероприятия необходимо будет подтвердить свои
+            Пожалуйста, корректно заполните все пункты анкеты. На&nbsp;стойке ресепшен в&nbsp;день <br />мероприятия необходимо будет подтвердить свои
             данные.
           </p>
 
-          <form action="#" class="form">
-            <fieldset class="fieldset">1</fieldset>
+          <script>
+            const registration = e => {
+              e.preventDefault();
+              window.popup.open('registration-success');
+            };
+          </script>
+
+          <form action="#" class="form" method="get" novalidate="novalidate" id="registrationForm" onsubmit="registration(event)">
             <fieldset class="fieldset">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum sint similique dolor earum reiciendis pariatur maxime quidem nulla
-              perspiciatis id, numquam odit ipsam sed quia rem iusto quo minus? Officiis.
+              <div class="fieldset__item">
+                <label class="form-label" for="Form_FullName">Фамилия Имя Отчество <span class="text-danger">*</span></label>
+                <input
+                  class="form-control input-validation-error"
+                  placeholder="Например: Иванов Иван"
+                  autocomplete="name"
+                  type="text"
+                  data-val="true"
+                  data-val-length="Максимум 200 символов."
+                  data-val-length-max="200"
+                  data-val-regex="Допустимы только русские буквы, пробел и дефис."
+                  data-val-regex-pattern="^[а-яёА-ЯЁ\s\-]+$"
+                  data-val-required="Укажите фамилию и имя."
+                  id="Form_FullName"
+                  maxlength="200"
+                  name="Form.FullName"
+                  value=""
+                  aria-describedby="Form_FullName-error"
+                  aria-invalid="true"
+                />
+                <!-- <span class="text-danger small field-validation-error" data-valmsg-for="Form.FullName" data-valmsg-replace="true">
+                  <span id="Form_FullName-error" class="">Укажите фамилию и имя.</span>
+                </span> -->
+              </div>
+
+              <div class="fieldset__item">
+                <label class="form-label" for="Form_Phone"> Телефон <span class="text-danger">*</span> </label>
+                <input
+                  class="form-control input-validation-error"
+                  placeholder="+7XXXXXXXXXX"
+                  type="tel"
+                  id="phoneInput"
+                  autocomplete="tel"
+                  data-val="true"
+                  data-val-regex="Введите телефон в формате +7XXXXXXXXXX."
+                  data-val-regex-pattern="^\+7\d{10}$"
+                  data-val-required="Укажите номер телефона."
+                  name="Form.Phone"
+                  value=""
+                  aria-describedby="phoneInput-error"
+                />
+                <div class="form-text">Формат: +7ХХХХХХХХХХ</div>
+                <!-- <span class="text-danger small field-validation-error" data-valmsg-for="Form.Phone" data-valmsg-replace="true">
+                  <span id="phoneInput-error" class="">Укажите номер телефона.</span>
+                </span> -->
+              </div>
+
+              <div class="fieldset__item">
+                <label class="form-label" for="Form_Email"> Электронная почта <span class="text-danger">*</span> </label>
+                <input
+                  class="form-control input-validation-error"
+                  placeholder="example@mail.ru"
+                  type="email"
+                  autocomplete="email"
+                  data-val="true"
+                  data-val-email="Некорректный формат email."
+                  data-val-length="Максимум 256 символов."
+                  data-val-length-max="256"
+                  data-val-required="Укажите email."
+                  id="Form_Email"
+                  maxlength="256"
+                  name="Form.Email"
+                  value=""
+                  aria-describedby="Form_Email-error"
+                />
+                <!-- <span class="text-danger small field-validation-error" data-valmsg-for="Form.Email" data-valmsg-replace="true">
+                  <span id="Form_Email-error" class="">Укажите email.</span>
+                </span> -->
+              </div>
+
+              <div class="fieldset__item">
+                <label class="form-label" for="Form_TelegramNick">Ник в Telegram <span class="text-danger">*</span> </label>
+                <input
+                  class="form-control input-validation-error"
+                  placeholder="username или @username"
+                  type="text"
+                  data-val="true"
+                  data-val-length="Максимум 100 символов."
+                  data-val-length-max="100"
+                  data-val-regex="Ник должен содержать 5-32 латинских символа, цифры или '_'. Символ @ необязателен."
+                  data-val-regex-pattern="^@?[a-zA-Z0-9_]{5,32}$"
+                  data-val-required="Укажите ник в Telegram."
+                  id="Form_TelegramNick"
+                  maxlength="100"
+                  name="Form.TelegramNick"
+                  value=""
+                  aria-describedby="Form_TelegramNick-error"
+                />
+                <div class="form-text help" data-popup-open="help">
+                  <img src="./assets/img/help.svg" alt="" />
+                  Где посмотреть ник в Telegram
+                </div>
+                <!-- <span class="text-danger small field-validation-error" data-valmsg-for="Form.TelegramNick" data-valmsg-replace="true">
+                  <span id="Form_TelegramNick-error" class="">Укажите ник в Telegram.</span>
+                </span> -->
+              </div>
             </fieldset>
-            <fieldset class="fieldset full">3</fieldset>
+
+            <fieldset class="fieldset">
+              <div class="fieldset__item col--3">
+                <label class="form-label d-block" for="withPlusOneYes">Буду с +1</label>
+                <input type="checkbox" class="btn-check" name="Form.WithPlusOne" id="withPlusOneYes" />
+                <label class="checkbox-label-text" for="withPlusOneYes">&nbsp;</label>
+                <!-- <div class="form-text">Каждый владелец может взять 1 взрослого и до 3 детей</div> -->
+              </div>
+
+              <div class="fieldset__item col--2">
+                <label class="form-label">Количество детей</label>
+                <div class="input-select-wrapper auto">
+                  <select
+                    class="form-select valid"
+                    id="childrenCountSelect"
+                    data-val="true"
+                    data-val-range="Допустимые значения: от 0 до 3."
+                    data-val-range-max="3"
+                    data-val-range-min="0"
+                    data-val-required="The Количество детей field is required."
+                    name="Form.ChildrenCount"
+                    aria-describedby="childrenCountSelect-error"
+                    aria-invalid="false"
+                  >
+                    <option selected="selected" value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                  <span class="input-icon">
+                    <img src="./assets/img/arrow-down.svg" alt="" />
+                  </span>
+                </div>
+
+                <!-- <span class="text-danger small field-validation-valid" data-valmsg-for="Form.ChildrenCount" data-valmsg-replace="true">Ошибка</span> -->
+              </div>
+
+              <div class="children" data-children style="display: none">
+                <label class="form-label">Возраст детей</label>
+
+                <div class="fieldset__item col--3" data-child-one style="display: none">
+                  <input
+                    type="number"
+                    name="Form.ChildrenAges[0]"
+                    class="form-control valid"
+                    placeholder="Лет"
+                    aria-describedby="Form.ChildrenAges[0]-error"
+                    aria-invalid="false"
+                  />
+                  <!-- <span class="text-danger small age-error">Ошибка</span> -->
+                </div>
+
+                <div class="fieldset__item col--3" data-child-two style="display: none">
+                  <input
+                    type="number"
+                    name="Form.ChildrenAges[1]"
+                    class="form-control valid"
+                    placeholder="Лет"
+                    aria-describedby="Form.ChildrenAges[1]-error"
+                    aria-invalid="false"
+                  />
+                  <!-- <span class="text-danger small age-error">Ошибка</span> -->
+                </div>
+
+                <div class="fieldset__item col--3" data-child-three style="display: none">
+                  <input
+                    type="number"
+                    name="Form.ChildrenAges[2]"
+                    class="form-control valid"
+                    placeholder="Лет"
+                    aria-describedby="Form.ChildrenAges[2]-error"
+                    aria-invalid="false"
+                  />
+                  <!-- <span class="text-danger small age-error">Ошибка</span> -->
+                </div>
+              </div>
+
+              <div class="fieldset__item">
+                <label class="form-label">Автомобиль <span class="text-danger">*</span> </label>
+                <div class="input-select-wrapper">
+                  <select
+                    class="form-select input-validation-error"
+                    data-val="true"
+                    data-val-range="Выберите модель автомобиля."
+                    data-val-range-max="3"
+                    data-val-range-min="1"
+                    data-val-required="Укажите модель автомобиля."
+                    id="Form_CarModel"
+                    name="Form.CarModel"
+                    aria-describedby="Form_CarModel-error"
+                  >
+                    <option value="" selected disabled hidden>— Выберите модель —</option>
+                    <option value="1">HAVAL JOLION</option>
+                    <option value="2">HAVAL F7</option>
+                    <option value="3">HAVAL F7X</option>
+                  </select>
+                  <span class="input-icon">
+                    <img src="./assets/img/arrow-down.svg" alt="" />
+                  </span>
+                </div>
+                <!-- <span class="text-danger small field-validation-error" data-valmsg-for="Form.CarModel" data-valmsg-replace="true">
+                  <span id="Form_CarModel-error" class="">Укажите модель автомобиля.</span>
+                </span> -->
+              </div>
+
+              <div class="fieldset__item">
+                <label class="form-label" for="Form_VinNumber">VIN номер <span class="text-danger">*</span> </label>
+                <input
+                  class="form-control input-validation-error"
+                  placeholder="17 символов"
+                  maxlength="17"
+                  id="vinInput"
+                  type="text"
+                  data-val="true"
+                  data-val-length="VIN номер должен содержать ровно 17 символов."
+                  data-val-length-max="17"
+                  data-val-length-min="17"
+                  data-val-regex="VIN содержит только заглавные латинские буквы (кроме I, O, Q) и цифры."
+                  data-val-regex-pattern="^[A-HJ-NPR-Z0-9]{17}$"
+                  data-val-required="Укажите VIN номер."
+                  name="Form.VinNumber"
+                  value=""
+                  aria-describedby="vinInput-error"
+                />
+                <div class="form-text">Вводится вручную, 17 символов</div>
+                <!-- <span class="text-danger small field-validation-error" data-valmsg-for="Form.VinNumber" data-valmsg-replace="true">
+                  <span id="vinInput-error" class="">Укажите VIN номер.</span>
+                </span> -->
+              </div>
+            </fieldset>
+
+            <fieldset class="fieldset full">
+              <div class="form-check">
+                <input
+                  class="form-check-input valid"
+                  type="checkbox"
+                  id="consentPersonalData"
+                  data-val="true"
+                  data-val-required="The Согласие на обработку персональных данных field is required."
+                  name="Form.ConsentPersonalData"
+                  value="true"
+                  aria-describedby="Form.ConsentPersonalData-error"
+                />
+                <label class="form-check-label" for="consentPersonalData">
+                  Даю согласие на обработку персональных данных
+                  <span class="text-danger">*</span>
+                </label>
+                <span
+                  class="text-danger small d-block ms-4 field-validation-valid"
+                  data-valmsg-for="Form.ConsentPersonalData"
+                  data-valmsg-replace="true"
+                >
+                  Ошибка
+                </span>
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input valid"
+                  type="checkbox"
+                  id="consentAdvertising"
+                  data-val="true"
+                  data-val-required="The Согласие на рекламную коммуникацию field is required."
+                  name="Form.ConsentAdvertising"
+                  value="true"
+                  aria-describedby="Form.ConsentAdvertising-error"
+                />
+                <label class="form-check-label" for="consentAdvertising">
+                  Даю согласие на рекламную коммуникацию
+                  <span class="text-danger">*</span>
+                </label>
+                <!-- <span
+                  class="text-danger small d-block ms-4 field-validation-valid"
+                  data-valmsg-for="Form.ConsentAdvertising"
+                  data-valmsg-replace="true"
+                >
+                  Ошибка
+                </span> -->
+              </div>
+
+              <input name="__RequestVerificationToken" type="hidden" value="" />
+              <input name="Form.ConsentPersonalData" type="hidden" value="false" />
+              <input name="Form.ConsentAdvertising" type="hidden" value="false" />
+            </fieldset>
 
             <button type="submit" class="button"><span>Отправить</span></button>
           </form>
