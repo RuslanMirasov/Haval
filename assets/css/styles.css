@@ -993,7 +993,7 @@ input[type=number]::-webkit-inner-spin-button {
 .text-danger {
   display: block;
   text-align: left;
-  font-size: 12px;
+  font-size: clamp(8px, 0.8333vw, 12px);
   line-height: 1;
   color: var(--invalid);
 }
