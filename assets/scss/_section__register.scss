@@ -59,6 +59,14 @@
     .fieldset__item {
       display: flex;
       flex-direction: column;
+      &.row {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 4px 8px;
+        .text-danger {
+          width: 100%;
+        }
+      }
       justify-content: flex-start;
       align-items: flex-start;
       position: relative;

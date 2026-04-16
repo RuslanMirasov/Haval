@@ -62,20 +62,20 @@
 
           <ul class="program">
             <li>
-              <span>12:30-13:30</span>
-              <span>Регистрация<br />Welcome coffee<br />Флешмоб</span>
+              <span>13:00</span>
+              <span>Сбор гостей</span>
             </li>
             <li>
-              <span>13:30-17:30</span>
-              <span>Активности</span>
+              <span>13:00 - 14:00</span>
+              <span>Регистрация<br />Welcome coffee</span>
             </li>
             <li>
-              <span>17:30 - 19:00</span>
-              <span>Барбекю</span>
+              <span>14:00 - 18:30</span>
+              <span>Активности<br />Барбекю</span>
             </li>
             <li>
-              <span>19:00-19:30</span>
-              <span>&nbsp;<br />Окончание<br />мероприятия</span>
+              <span>19:00</span>
+              <span>Окончание мероприятия</span>
             </li>
           </ul>
         </div>
@@ -202,11 +202,14 @@
             </fieldset>
 
             <fieldset class="fieldset">
-              <div class="fieldset__item col--3">
-                <label class="form-label d-block" for="withPlusOneYes">Буду с +1</label>
-                <input type="checkbox" class="btn-check" name="Form.WithPlusOne" id="withPlusOneYes" />
-                <label class="checkbox-label-text" for="withPlusOneYes">&nbsp;</label>
-                <!-- <div class="form-text">Каждый владелец может взять 1 взрослого и до 3 детей</div> -->
+              <div class="fieldset__item row col--3">
+                <label class="form-label d-block" for="withPlusOneYes">Буду с гостем</label>
+                <input type="radio" class="btn-check" name="Form.WithPlusOne" id="withPlusOneYes" value="true" />
+                <label class="checkbox-label-text" for="withPlusOneYes">Да</label>
+
+                <input type="radio" class="btn-check" name="Form.WithPlusOne" id="withPlusOneNo" value="false" />
+                <label class="checkbox-label-text" for="withPlusOneNo">Нет</label>
+                <!-- <span class="text-danger small age-error">Ошибка</span> -->
               </div>
 
               <div class="fieldset__item col--2">

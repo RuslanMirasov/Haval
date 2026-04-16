@@ -66,8 +66,8 @@ label .text-danger {
     border: none;
     border-bottom: 1px solid var(--black);
     color: var(--black);
-    font-family: var(--tt);
-    font-weight: 500;
+    font-family: var(--next);
+    font-weight: 400;
     outline: none;
     font-size: myclamp(12px, 23px, 1440px, 1440px);
     padding: 0;
@@ -76,7 +76,7 @@ label .text-danger {
       box-shadow: 0 0 0px 1000px var(--grey-light) inset !important;
       -webkit-text-fill-color: var(--black) !important;
       font-size: myclamp(12px, 23px, 1440px, 1440px) !important;
-      font-family: var(--tt) !important;
+      font-family: var(--next) !important;
       transition: background-color 9999s ease-in-out 0s;
     }
   }
@@ -89,28 +89,21 @@ label .text-danger {
     justify-content: center;
     align-items: center;
     position: relative;
-    width: myclamp(18px, 49px, 1440px, 1440px);
-    height: myclamp(18px, 45px, 1440px, 1440px);
+    width: myclamp(30px, 47px, 1440px, 1440px);
+    height: myclamp(30px, 43px, 1440px, 1440px);
     border: 1px solid var(--black);
+    font-family: var(--next);
+    font-size: myclamp(11px, 23px, 1440px, 1440px);
     cursor: pointer;
     user-select: none;
     margin: 4px 0px;
-    &:before {
-      content: '';
-      position: absolute;
-      width: myclamp(10px, 31px, 1440px, 1440px);
-      height: myclamp(10px, 29px, 1440px, 1440px);
-      background: var(--color);
-      transform: scale(0);
-      transition: transform 0.3s var(--transition) 0s;
-    }
+    background: rgba(0, 0, 0, 0);
+    transition: 0.3s var(--transition);
   }
 
   &:checked {
     + .checkbox-label-text {
-      &:before {
-        transform: scale(1);
-      }
+      background: var(--color);
     }
   }
 }
@@ -185,8 +178,8 @@ label .text-danger {
   margin: myclamp(2px, 4px, 1440px, 1440px) 0px;
   background: rgba(0, 0, 0, 0);
   padding: 0px myclamp(8px, 13px, 1440px, 1440px);
-  font-family: var(--tt);
-  font-weight: 500;
+  font-family: var(--next);
+  font-weight: 400;
   font-size: myclamp(18px, 35px, 1440px, 1440px);
   outline: none;
   color: var(--black);
@@ -198,7 +191,7 @@ label .text-danger {
     box-shadow: 0 0 0px 1000px var(--grey-light) inset !important;
     -webkit-text-fill-color: var(--black) !important;
     font-size: myclamp(18px, 35px, 1440px, 1440px) !important;
-    font-family: var(--tt) !important;
+    font-family: var(--next) !important;
     transition: background-color 9999s ease-in-out 0s;
   }
 }
@@ -227,7 +220,7 @@ label .text-danger {
   margin: myclamp(2px, 4px, 1440px, 1440px) 0px;
   background: var(--grey-light);
   padding: 0px myclamp(8px, 13px, 1440px, 1440px);
-  font-family: var(--tt);
+  font-family: var(--next);
   font-weight: 500;
   font-size: myclamp(18px, 35px, 1440px, 1440px);
   outline: none;

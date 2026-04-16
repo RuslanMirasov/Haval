@@ -13,11 +13,11 @@
   width: 100%;
   left: 50%;
   transform: translate(-50%, 0%);
-  margin-bottom: -14.5vw;
+  margin-bottom: -11vw;
 
   @media (max-width: 640px) {
     min-width: 640px;
-    margin-bottom: -95px;
+    margin-bottom: -72px;
   }
 
   @media (max-width: 500px) {
@@ -37,6 +37,12 @@
   align-content: center;
   gap: myclamp(20px, 60px, 1440px, 1440px);
   margin-bottom: myclamp(10px, 30px, 1440px, 1440px);
+
+  @media (max-width: 1439px) {
+    br {
+      display: none;
+    }
+  }
 }
 
 .hero-date {
@@ -47,4 +53,11 @@
   align-items: center;
   align-content: center;
   gap: myclamp(20px, 30px, 1440px, 1440px);
+
+  .title {
+    padding: 0px myclamp(0px, 37px, 1440px, 1440px);
+    @media (max-width: 767px) {
+      padding: 0;
+    }
+  }
 }
