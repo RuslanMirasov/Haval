@@ -91,7 +91,7 @@
     height: myclamp(100px, 390px, 1440px, 1440px);
     right: 50%;
     transform: translate(-108%, 2%) rotate(-12deg);
-    @media (max-width: 767px) {
+    @media (max-width: 1023px) {
       transform: translate(-100%, -15%) rotate(-21.35deg);
     }
   }
@@ -102,7 +102,7 @@
     left: 50%;
     transform: translate(95%, -10%) rotate(-50.79deg);
     @media (max-width: 1279px) {
-      transform: translate(80%, -10%) rotate(-50.79deg);
+      transform: translate(90%, -10%) rotate(-50.79deg);
     }
     @media (max-width: 767px) {
       transform: translate(90%, -10%) rotate(-35.79deg);
